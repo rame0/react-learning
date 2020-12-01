@@ -1,0 +1,18 @@
+.sidebar {
+    grid-area: side;
+    border-right: 1px solid #ccc;
+    padding:20px 0;
+}
+
+.item a {
+    color: #000;
+    text-decoration: none;
+    padding: 2px 10px;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.item a.active {
+    color: #000;
+    background-color: #ddd;
+}

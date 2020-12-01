@@ -1,0 +1,12 @@
+.new_post *{
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}
+
+.message {
+    width: 30%;
+}
+
+.submit {
+    margin-left: 10px;
+}
