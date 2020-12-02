@@ -5,16 +5,6 @@ import css from "./Wall.module.css";
 import profileHead from '../../../media/profile_head.jpg'
 
 export class Wall extends Component {
-  constructor (props) {
-    super(props);
-
-    this.posts = [
-      {text: "Текст записи 100", likes: 5},
-      {text: "Запись 23", likes: 50},
-      {text: "Запись 1", likes: 100},
-    ];
-  }
-
   render () {
     return (
       <div>
@@ -28,9 +18,7 @@ export class Wall extends Component {
 
           <h3>Стена</h3>
 
-          {this.posts.map(post => {
-            return <Post message={post.text}/>
-          })}
+          {this.props.posts.map(post => <Post post={post} key={post.id}/>)}
         </div>
       </div>
     )

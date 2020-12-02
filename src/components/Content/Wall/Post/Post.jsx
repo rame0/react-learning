@@ -8,12 +8,9 @@ export class Post extends Component {
     return (
       <div className={p.post}>
         <img className={p.avatar} src={avatar} alt="avatar"/>
-        <div className={p.name}>
-          Иван Иванович
-        </div>
-        <div className={p.text}>
-          {this.props.message}
-        </div>
+        <div className={p.name}>Иван Иванович</div>
+        <div className={p.text}>{this.props.post.text}</div>
+        <div className={p.likes}>👍{this.props.post.likes}</div>
       </div>
     )
   }

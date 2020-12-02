@@ -6,13 +6,13 @@ import {Content} from "./components/Content/Content";
 import {Footer} from "./components/Footer/Footer";
 import {BrowserRouter} from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="App">
         <Header/>
         <Sidebar/>
-        <Content/>
+        <Content data={props.data}/>
         <Footer/>
       </div>
     </BrowserRouter>
