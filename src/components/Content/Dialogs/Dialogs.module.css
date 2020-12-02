@@ -8,6 +8,7 @@
 }
 
 .dialog {
+    display: block;
     padding: 10px 15px;
     margin: 5px 0;
     background-color: #aaa;

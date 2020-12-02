@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import logo from "../../logo.svg";
+import logo from "../../media/logo.svg";
 import h from './Header.module.css'
 
 export class Header extends Component {

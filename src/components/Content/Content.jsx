@@ -9,8 +9,6 @@ export class Content extends Component {
   render () {
     return (
       <div className={c.content}>
-        <img className={c.top_image} src="http://www.briangreen.com/wp-content/uploads/2014/05/cropped-IMG_07461.jpg"
-             alt="main"/>
         <Route exact path="/" component={Home}/>
         <Route path="/wall" component={Wall}/>
         <Route path="/dialogs" component={Dialogs}/>
