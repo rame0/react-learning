@@ -10,8 +10,8 @@ export class Content extends Component {
     return (
       <div className={c.content}>
         <Route exact path="/" component={Home}/>
-        <Route path="/wall" render={() => <Wall posts={this.props.data.posts}/>}/>
-        <Route path="/dialogs" render={() => <Dialogs data={this.props.data}/>}/>
+        <Route path="/wall" render={() => <Wall posts={this.props.state.wallPage.posts}/>}/>
+        <Route path="/dialogs" render={() => <Dialogs data={this.props.state.dialogsPage}/>}/>
       </div>
     )
   }

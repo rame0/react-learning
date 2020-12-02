@@ -8,11 +8,11 @@ import {BrowserRouter} from "react-router-dom";
 
 const App = (props) => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-learning">
       <div className="App">
         <Header/>
         <Sidebar/>
-        <Content data={props.data}/>
+        <Content state={props.state}/>
         <Footer/>
       </div>
     </BrowserRouter>
