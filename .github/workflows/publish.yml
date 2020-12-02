@@ -15,8 +15,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
         
-      - name: Test the app
-        run: yarn test
+#       - name: Test the app
+#         run: yarn test
         
       - name: Generate your awesome content
         run: yarn buld
