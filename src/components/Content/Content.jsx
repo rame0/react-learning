@@ -13,7 +13,7 @@ export class Content extends Component {
         <Route path="/wall" render={() => <Wall store={this.props.store} dispatch={this.props.dispatch}/>}
         />
         <Route path="/dialogs"
-               render={() => <Dialogs data={this.props.store.getState().dialogsPage} dispatch={this.props.dispatch}/>}/>
+               render={() => <Dialogs store={this.props.store} dispatch={this.props.dispatch}/>}/>
       </div>
     )
   }

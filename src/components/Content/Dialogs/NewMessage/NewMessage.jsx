@@ -1,17 +1,26 @@
-import React from "react";
+import React, {Component} from "react";
 import css from "./NewMessage.module.css";
+import {sendMessageActionCreator, updateNewMessageActionCreator} from "../../../../redux/state";
 
-export const NewMessage = (props) => {
-  let textarea = React.createRef();
+export class NewMessage extends Component {
+  textarea = React.createRef();
 
-  let sendMessage = () => {
-    let text = textarea.current.value;
-    alert(text);
+  sendMessage () {
+    this.props.dispatch(sendMessageActionCreator());
   }
-  return (
-    <div className={css.new_message}>
-      <textarea className={css.message} ref={textarea}/>
-      <button className={css.submit} onClick={sendMessage}>Отправить</button>
-    </div>
-  )
+
+  onChangeText = () => {
+    let text = this.textarea.current.value
+    this.props.dispatch(updateNewMessageActionCreator(text));
+  }
+
+  render () {
+    return (
+      <div className={css.new_message}>
+        <textarea className={css.message} ref={this.textarea} onChange={this.onChangeText.bind(this)}
+                  value={this.props.store.getState().dialogsPage.newMessageText}/>
+        <button className={css.submit} onClick={this.sendMessage.bind(this)}>Отправить</button>
+      </div>
+    )
+  }
 }

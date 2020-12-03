@@ -3,18 +3,18 @@
     grid-template-columns: 4fr 8fr;
 }
 
-.dialogs {
+.contacts {
     padding: 5px;
 }
 
-.dialog {
+.contact {
     padding: 10px 15px;
     margin: 5px 0;
     background-color: #aaa;
     border-radius: 10px;
 }
 
-.dialog__active{
+.contact__active{
     background-color: #eee;
 }
 

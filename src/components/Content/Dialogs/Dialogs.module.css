@@ -1,35 +1,62 @@
 .dialog_grid {
     display: grid;
+    grid-template-areas:
+        "contacts messages"
+        "contacts newMessage";
     grid-template-columns: 4fr 8fr;
+    height: 80vh;
 }
 
-.dialogs {
+.contacts {
+    grid-area: contacts;
     padding: 5px;
-}
-
-.dialog {
-    display: block;
-    padding: 10px 15px;
-    margin: 5px 0;
-    background-color: #aaa;
-    border-radius: 10px;
-}
-
-.dialog__active{
     background-color: #eee;
 }
 
+.contact {
+    display: block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.contact__active {
+    background-color: #aaa;
+}
+
 .messages {
+    grid-area: messages;
     padding: 5px;
     background-color: #fff;
+    overflow: auto;
+}
+
+.new_message {
+    grid-area: newMessage;
+    margin-left: 5px;
+    /*grid-column: 2;*/
 }
 
 .message {
     padding: 10px;
     margin: 15px 0 30px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
     box-shadow: 6px 4px 14px -5px #aaa;
     border: 1px solid #eee;
+}
+
+.messageText {
+    margin-bottom: 15px;
+}
+
+.messageDate {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: #ccc;
+    font-size: 85%;
+    font-style: italic;
 }

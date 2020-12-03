@@ -7,14 +7,21 @@ class ContactItem extends React.Component {
   render () {
     let path = "/dialogs/" + this.props.id
     return (
-      <NavLink to={path} className={css.dialog} activeClassName={css.dialog__active}>{this.props.name}</NavLink>
+      <NavLink to={path} className={css.contact} activeClassName={css.contact__active}>{this.props.name}</NavLink>
     )
   }
 }
 
 class MessageItem extends React.Component {
   render () {
-    return <div className={css.message}>{this.props.message}</div>
+    return <div className={css.message}>
+      <div className={css.messageText}>
+        {this.props.message}
+      </div>
+      <div className={css.messageDate}>
+        {this.props.date.toLocaleString()}
+      </div>
+    </div>
   }
 }
 
@@ -22,17 +29,19 @@ export class Dialogs extends React.Component {
   render () {
     return (
       <div className={css.dialog_grid}>
-        <div className={css.dialogs}>
-          {this.props.data.contacts.map(item => {
+        <div className={css.contacts}>
+          {this.props.store.getState().dialogsPage.contacts.map(item => {
             return <ContactItem name={item.name} id={item.id} key={item.id}/>
           })}
         </div>
         <div className={css.messages}>
-          {this.props.data.messages.map(msg => {
-            return <MessageItem message={msg.message} key={msg.id}/>
+          {this.props.store.getState().dialogsPage.messages.map(msg => {
+            return <MessageItem message={msg.message} key={msg.id} date={msg.date}/>
           })}
 
-          <NewMessage/>
+        </div>
+        <div className={css.new_message}>
+          <NewMessage store={this.props.store} dispatch={this.props.dispatch}/>
         </div>
       </div>
     );
