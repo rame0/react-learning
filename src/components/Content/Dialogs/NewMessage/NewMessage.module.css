@@ -1,0 +1,26 @@
+.new_message {
+    background-color: #eeeeee;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.message {
+    display: block;
+    width: calc(100% - 10px);
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    margin: 0 0 10px;
+    resize: none;
+}
+
+.message:focus{
+    outline: none;
+}
+
+.submit {
+    float:right;
+}

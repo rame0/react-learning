@@ -1,4 +1,6 @@
-let state = {
+import {renderUI} from "../render";
+
+export let state = {
   dialogsPage: {
     contacts: [
       {id: 2, name: 'Аня'},
@@ -22,8 +24,20 @@ let state = {
       {id: 1, text: "Текст записи 100", likes: 5},
       {id: 2, text: "Запись 23", likes: 50},
       {id: 3, text: "Запись 1", likes: 100},
-    ]
+    ],
+    newPostText: 'Введите сообщение',
   }
 }
 
-export default state;
+export let addPost = () => {
+  let id = state.wallPage.posts[state.wallPage.posts.length - 1] + 1
+  let message = state.wallPage.newPostText
+  state.wallPage.posts.push({id: id, text: message, likes: 0})
+  state.wallPage.newPostText = ''
+  renderUI(state, addPost, updatePostText)
+}
+
+export let updatePostText = (text) => {
+  state.wallPage.newPostText = text
+  renderUI(state, addPost, updatePostText)
+}

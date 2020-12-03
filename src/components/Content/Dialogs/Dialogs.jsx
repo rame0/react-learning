@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
+import {NewMessage} from "./NewMessage/NewMessage";
 
 class ContactItem extends React.Component {
   render () {
@@ -30,6 +31,8 @@ export class Dialogs extends React.Component {
           {this.props.data.messages.map(msg => {
             return <MessageItem message={msg.message} key={msg.id}/>
           })}
+
+          <NewMessage/>
         </div>
       </div>
     );

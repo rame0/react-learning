@@ -14,11 +14,13 @@ export class Wall extends Component {
         </div>
         <div className={css.wallBlock}>
           <h3>Добавить Сообщение на стену</h3>
-          <NewPost/>
+          <NewPost newPostText={this.props.posts.newPostText}
+                   addPost={this.props.addPost}
+                   updatePostText={this.props.updatePostText}/>
 
           <h3>Стена</h3>
 
-          {this.props.posts.map(post => <Post post={post} key={post.id}/>)}
+          {this.props.posts.posts.map(post => <Post post={post} key={post.id}/>)}
         </div>
       </div>
     )
