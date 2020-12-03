@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-learning/static/css/main.98544fc1.chunk.css",
-    "main.js": "/react-learning/static/js/main.b3db165e.chunk.js",
-    "main.js.map": "/react-learning/static/js/main.b3db165e.chunk.js.map",
-    "runtime-main.js": "/react-learning/static/js/runtime-main.4fbfa727.js",
-    "runtime-main.js.map": "/react-learning/static/js/runtime-main.4fbfa727.js.map",
-    "static/js/2.c079ef6c.chunk.js": "/react-learning/static/js/2.c079ef6c.chunk.js",
-    "static/js/2.c079ef6c.chunk.js.map": "/react-learning/static/js/2.c079ef6c.chunk.js.map",
-    "static/js/3.a5a20c84.chunk.js": "/react-learning/static/js/3.a5a20c84.chunk.js",
-    "static/js/3.a5a20c84.chunk.js.map": "/react-learning/static/js/3.a5a20c84.chunk.js.map",
+    "main.css": "/react-learning/static/css/main.a0bfc362.chunk.css",
+    "main.js": "/react-learning/static/js/main.a89f771b.chunk.js",
+    "main.js.map": "/react-learning/static/js/main.a89f771b.chunk.js.map",
+    "runtime-main.js": "/react-learning/static/js/runtime-main.8167dc0b.js",
+    "runtime-main.js.map": "/react-learning/static/js/runtime-main.8167dc0b.js.map",
+    "static/js/2.7b5b6d34.chunk.js": "/react-learning/static/js/2.7b5b6d34.chunk.js",
+    "static/js/2.7b5b6d34.chunk.js.map": "/react-learning/static/js/2.7b5b6d34.chunk.js.map",
+    "static/js/3.e5d3ffe0.chunk.js": "/react-learning/static/js/3.e5d3ffe0.chunk.js",
+    "static/js/3.e5d3ffe0.chunk.js.map": "/react-learning/static/js/3.e5d3ffe0.chunk.js.map",
     "index.html": "/react-learning/index.html",
-    "static/css/main.98544fc1.chunk.css.map": "/react-learning/static/css/main.98544fc1.chunk.css.map",
-    "static/js/2.c079ef6c.chunk.js.LICENSE.txt": "/react-learning/static/js/2.c079ef6c.chunk.js.LICENSE.txt",
+    "static/css/main.a0bfc362.chunk.css.map": "/react-learning/static/css/main.a0bfc362.chunk.css.map",
+    "static/js/2.7b5b6d34.chunk.js.LICENSE.txt": "/react-learning/static/js/2.7b5b6d34.chunk.js.LICENSE.txt",
     "static/media/logo.103b5fa1.svg": "/react-learning/static/media/logo.103b5fa1.svg",
     "static/media/profile_head.60cf3c3b.jpg": "/react-learning/static/media/profile_head.60cf3c3b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4fbfa727.js",
-    "static/js/2.c079ef6c.chunk.js",
-    "static/css/main.98544fc1.chunk.css",
-    "static/js/main.b3db165e.chunk.js"
+    "static/js/runtime-main.8167dc0b.js",
+    "static/js/2.7b5b6d34.chunk.js",
+    "static/css/main.a0bfc362.chunk.css",
+    "static/js/main.a89f771b.chunk.js"
   ]
 }
