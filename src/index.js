@@ -1,9 +1,25 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {addPost, state, updatePostText} from "./redux/state";
-import {renderUI} from "./render";
+import {store} from "./redux/state";
+import ReactDOM from "react-dom";
+import React from "react";
+import {App} from "./App";
 
-renderUI(state, addPost, updatePostText)
+let renderUI = () => {
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <App store={store} dispatch={store.dispatch.bind(store)}/>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+
+}
+
+store.subscribe(renderUI);
+
+
+renderUI()
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

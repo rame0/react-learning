@@ -5,18 +5,23 @@ import css from './NewPost.module.css'
 export class NewPost extends Component {
   textarea = React.createRef();
 
-  onChangeText = (textarea) => {
-    let text = textarea.current.value;
-    this.props.updatePostText(text);
+  onPostAdd = () => {
+    this.props.store.dispatch({type: 'ADD-POST'});
+  }
+  onChangeText = () => {
+    let action = {
+      type: 'UPDATE-NEW-POST-TEXT',
+      text: this.textarea.current.value
+    };
+    this.props.store.dispatch(action);
   }
 
   render () {
     return (
       <div className={css.new_post}>
-        <textarea className={css.message} onChange={() => {
-          this.onChangeText(this.textarea)
-        }} ref={this.textarea} value={this.props.newPostText}/>
-        <button className={css.submit} onClick={this.props.addPost}>Отправить
+        <textarea className={css.message} onChange={this.onChangeText} ref={this.textarea}
+                  value={this.props.store.getState().wallPage.newPostText}/>
+        <button className={css.submit} onClick={this.onPostAdd}>Отправить
         </button>
       </div>
     )

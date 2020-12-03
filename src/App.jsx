@@ -13,9 +13,7 @@ export class App extends Component {
         <div className="App">
           <Header/>
           <Sidebar/>
-          <Content state={this.props.state}
-                   addPost={this.props.addPost}
-                   updatePostText={this.props.updatePostText}/>
+          <Content store={this.props.store} dispatch={this.props.dispatch}/>
           <Footer/>
         </div>
       </BrowserRouter>
