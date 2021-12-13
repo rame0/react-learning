@@ -21,7 +21,7 @@ jobs:
           yarn build
 
       - name: Publish builded content to GitHub Pages
-        uses: rame0/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           FOLDER: build
           BRANCH: gh-pages
